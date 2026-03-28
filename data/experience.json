@@ -1,0 +1,49 @@
+{
+  "sectionTitle": "Professional Experience",
+  "experiences": [
+    {
+      "title": "Data Science Research Assistant",
+      "company": "Drexel University, PA, USA",
+      "period": "Sep 2025 - Mar 2026",
+      "location": "",
+      "image": "",
+      "color": "#667eea",
+      "description": "Driving large-scale AI/ML research focused on modeling online community behavior, toxicity dynamics, and lifecycle patterns using advanced Natural Language Processing and statistical learning. Designed end-to-end data pipelines to process and analyze 200GB+ of Reddit data, transforming unstructured social media content into structured insights. Leveraged transformer-based models and large-scale analytics to identify signals of community growth, engagement, moderation effectiveness, and decline. This work directly contributes to understanding digital ecosystems and building predictive frameworks for community sustainability.",
+      "responsibilities": [
+        "Architected scalable data pipelines to process 200GB+ unstructured Reddit data using Python, enabling efficient ingestion, preprocessing, and transformation of large-scale text datasets",
+        "Applied transformer-based NLP models (Hugging Face, DeBERTa variants) and Detoxify to perform toxicity and hate speech classification across millions of records",
+        "Engineered high-value features including sentiment distributions, toxicity scores, temporal engagement metrics, and user activity patterns for downstream ML analysis",
+        "Performed statistical modeling and exploratory data analysis to uncover trends in community growth, attrition, and moderation impact",
+        "Developed automated workflows for data collection via APIs and batch processing using Linux-based high-performance computing environments",
+        "Resolved large-scale data challenges including schema inconsistencies, timestamp normalization, and memory-efficient processing of high-volume CSV files",
+        "Analyzed moderator behavior, AutoModerator contributions, and restricted/banned subreddit patterns to quantify community health indicators",
+        "Optimized data processing performance using chunking strategies, parallel execution, and background processing (nohup), improving pipeline efficiency",
+        "Collaborated with interdisciplinary research teams to translate machine learning outputs into interpretable insights for academic and applied research",
+        "Documented end-to-end pipelines, methodologies, and experimental results to ensure reproducibility and scalability of research workflows"
+      ]
+    },
+    {
+      "title": "Software Engineer (AI, Data & Systems)",
+      "company": "Mobileum Technologies, India",
+      "period": "Oct 2021 - Dec 2024",
+      "location": "",
+      "image": "",
+      "color": "#f093fb",
+      "description": "Built data-driven systems and intelligent automation solutions for large-scale telecom analytics platforms, combining data engineering, machine learning concepts, and distributed system operations. Specialized in analyzing high-volume telecom data to detect anomalies, optimize network performance, and improve customer intelligence systems. Delivered measurable business impact by reducing network congestion by 23% and maintaining 98.8% production uptime across mission-critical systems. Integrated ML-driven approaches into CRM workflows to enhance targeting and engagement across 100K+ users.",
+      "responsibilities": [
+        "Designed and implemented anomaly detection solutions using Python, SQL, and statistical techniques to identify irregular telecom traffic patterns, reducing network congestion by 23%",
+        "Processed and analyzed large-scale telecom datasets (millions of events/day), extracting insights on user behavior, roaming patterns, and network performance",
+        "Developed robust data pipelines and automation scripts using Python and Bash to streamline ETL workflows, monitoring, and system operations",
+        "Engineered feature extraction logic from telecom event streams to support analytics and machine learning-driven decision systems",
+        "Integrated ML-based targeting logic into CRM platforms, improving campaign effectiveness across 100K+ users in EMEA regions",
+        "Led production server migrations and deployments across Linux and Solaris environments, ensuring 98.8% uptime and high system reliability",
+        "Handled L2/L3 production incidents, performing deep root cause analysis and system debugging in distributed environments",
+        "Implemented logging, monitoring, and data validation frameworks to ensure data integrity and pipeline stability",
+        "Collaborated with cross-functional teams including data engineers, analysts, and stakeholders to deliver scalable data solutions",
+        "Automated repetitive operational processes, significantly reducing manual effort and improving system efficiency",
+        "Contributed to system design improvements focusing on scalability, fault tolerance, and performance optimization",
+        "Maintained detailed technical documentation for workflows, scripts, and deployment processes to support long-term maintainability"
+      ]
+    }
+  ]
+}
