@@ -182,8 +182,15 @@ body {
 html.theme-transitioning *,
 html.theme-transitioning *::before,
 html.theme-transitioning *::after {
-    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+
+.accent-tone-1 { --item-accent: var(--color-accent-1); }
+.accent-tone-2 { --item-accent: var(--color-accent-2); }
+.accent-tone-3 { --item-accent: var(--color-accent-3); }
+.accent-tone-4 { --item-accent: var(--color-accent-4); }
+.accent-tone-5 { --item-accent: var(--color-accent-5); }
+.accent-tone-6 { --item-accent: var(--color-accent-6); }
 
 /* ============================================
    Utility Classes
@@ -530,6 +537,7 @@ html.theme-transitioning *::after {
 .highlight-item i {
     font-size: var(--font-size-xl);
     min-width: 40px;
+    color: var(--item-accent, var(--color-accent-1));
 }
 
 .highlight-item span {
@@ -726,6 +734,7 @@ html.theme-transitioning *::after {
 .stat-card i {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--spacing-sm);
+    color: var(--item-accent, var(--color-accent-1));
 }
 
 .stat-value {
@@ -804,6 +813,11 @@ html.theme-transitioning *::after {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        transparent 20%,
+        color-mix(in srgb, var(--item-accent, var(--color-accent-1)) 28%, transparent) 100%
+    );
 }
 
 .experience-body {
@@ -935,6 +949,11 @@ html.theme-transitioning *::after {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        transparent 20%,
+        color-mix(in srgb, var(--item-accent, var(--color-accent-1)) 20%, transparent) 100%
+    );
 }
 
 .skill-category-body {
@@ -960,6 +979,8 @@ html.theme-transitioning *::after {
     justify-content: center;
     font-size: var(--font-size-xl);
     flex-shrink: 0;
+    background: color-mix(in srgb, var(--item-accent, var(--color-accent-1)) 20%, transparent);
+    color: var(--item-accent, var(--color-accent-1));
 }
 
 .skill-category-title {
@@ -1083,7 +1104,7 @@ html.theme-transitioning *::after {
     font-size: var(--font-size-2xl);
     color: var(--color-heading-contrast);
     margin-bottom: var(--spacing-md);
-    background: var(--gradient-primary);
+    background: var(--item-accent, var(--color-accent-1));
 }
 
 .project-header {
@@ -1361,6 +1382,8 @@ html.theme-transitioning *::after {
     justify-content: center;
     font-size: var(--font-size-lg);
     flex-shrink: 0;
+    background: color-mix(in srgb, var(--item-accent, var(--color-accent-1)) 20%, transparent);
+    color: var(--item-accent, var(--color-accent-1));
 }
 
 .contact-info-content h4 {

@@ -120,9 +120,9 @@ async function loadHero() {
         // Render highlights
         const highlightsContainer = document.getElementById('hero-highlights');
         if (highlightsContainer && data.highlights) {
-            highlightsContainer.innerHTML = data.highlights.map(highlight => `
-                <div class="highlight-item">
-                    <i class="${highlight.icon}" style="color: ${highlight.color}"></i>
+            highlightsContainer.innerHTML = data.highlights.map((highlight, index) => `
+                <div class="highlight-item accent-tone-${(index % 6) + 1}">
+                    <i class="${highlight.icon}"></i>
                     <span>${highlight.text}</span>
                 </div>
             `).join('');
@@ -184,9 +184,9 @@ async function loadAbout() {
         // Render statistics
         const statsContainer = document.getElementById('about-stats');
         if (statsContainer && data.statistics) {
-            statsContainer.innerHTML = data.statistics.map(stat => `
-                <div class="stat-card">
-                    <i class="${stat.icon}" style="color: ${stat.color}"></i>
+            statsContainer.innerHTML = data.statistics.map((stat, index) => `
+                <div class="stat-card accent-tone-${(index % 6) + 1}">
+                    <i class="${stat.icon}"></i>
                     <span class="stat-value">${stat.value}</span>
                     <span class="stat-label">${stat.label}</span>
                 </div>
@@ -222,12 +222,12 @@ async function loadExperience() {
         // Render experience cards
         const experienceGrid = document.getElementById('experience-grid');
         if (experienceGrid && data.experiences) {
-            experienceGrid.innerHTML = data.experiences.map(exp => `
-                <div class="experience-card">
+            experienceGrid.innerHTML = data.experiences.map((exp, index) => `
+                <div class="experience-card accent-tone-${(index % 6) + 1}">
                     ${exp.image ? `
                         <div class="experience-image">
                             <img src="${exp.image}" alt="${exp.company}" loading="lazy">
-                            <div class="experience-image-overlay" style="background: linear-gradient(180deg, transparent 20%, ${exp.color ? `${exp.color}44` : 'color-mix(in srgb, var(--color-accent-1) 28%, transparent)'} 100%)"></div>
+                            <div class="experience-image-overlay"></div>
                         </div>
                     ` : ''}
                     <div class="experience-body">
@@ -276,17 +276,17 @@ async function loadSkills() {
         // Render skill categories
         const skillsGrid = document.getElementById('skills-grid');
         if (skillsGrid && data.categories) {
-            skillsGrid.innerHTML = data.categories.map(category => `
-                <div class="skill-category">
+            skillsGrid.innerHTML = data.categories.map((category, index) => `
+                <div class="skill-category accent-tone-${(index % 6) + 1}">
                     ${category.image ? `
                         <div class="skill-category-image">
                             <img src="${category.image}" alt="${category.category}" loading="lazy">
-                            <div class="skill-category-image-overlay" style="background: linear-gradient(180deg, transparent 20%, ${category.color}33 100%)"></div>
+                            <div class="skill-category-image-overlay"></div>
                         </div>
                     ` : ''}
                     <div class="skill-category-body">
                         <div class="skill-category-header">
-                            <div class="skill-category-icon" style="background: ${category.color}20; color: ${category.color}">
+                            <div class="skill-category-icon">
                                 <i class="${category.icon}"></i>
                             </div>
                             <h3 class="skill-category-title">${category.category}</h3>
@@ -317,15 +317,15 @@ async function loadProjects() {
         // Render projects
         const projectsGrid = document.getElementById('projects-grid');
         if (projectsGrid && data.projects) {
-            projectsGrid.innerHTML = data.projects.map(project => `
-                <div class="project-card">
+            projectsGrid.innerHTML = data.projects.map((project, index) => `
+                <div class="project-card accent-tone-${(index % 6) + 1}">
                     ${project.image ? `
                         <div class="project-image">
                             <img src="${project.image}" alt="${project.title}" loading="lazy">
                             <div class="project-image-overlay"></div>
                         </div>
                     ` : ''}
-                    <div class="project-icon" style="background: ${project.color}">
+                    <div class="project-icon">
                         <i class="${project.icon}"></i>
                     </div>
                     <div class="project-header">
@@ -434,9 +434,9 @@ async function loadContact() {
         // Render contact info
         const contactInfoContainer = document.getElementById('contact-info');
         if (contactInfoContainer && data.contactInfo) {
-            contactInfoContainer.innerHTML = data.contactInfo.map(info => `
+            contactInfoContainer.innerHTML = data.contactInfo.map((info, index) => `
                 <a href="${info.href}" class="contact-info-item" ${info.type !== 'location' ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-                    <div class="contact-icon" style="background: ${info.color}20; color: ${info.color}">
+                    <div class="contact-icon accent-tone-${(index % 6) + 1}">
                         <i class="${info.icon}"></i>
                     </div>
                     <div class="contact-info-content">
@@ -713,16 +713,15 @@ function initializeParticles() {
             particlesContainer.innerHTML = '';
         }
 
-        const theme = document.documentElement.getAttribute('data-theme') || 'dark';
-        const particlePalette = theme === 'light'
-            ? {
-                colors: ['#6a8f76', '#7ea692', '#2f5b45'],
-                line: '#6a8f76'
-            }
-            : {
-                colors: ['#3c82ff', '#6f7dff', '#3bc9f4'],
-                line: '#3c82ff'
-            };
+        const computedStyles = getComputedStyle(document.documentElement);
+        const particlePalette = {
+            colors: [
+                computedStyles.getPropertyValue('--color-accent-1').trim(),
+                computedStyles.getPropertyValue('--color-accent-4').trim(),
+                computedStyles.getPropertyValue('--color-accent-5').trim()
+            ],
+            line: computedStyles.getPropertyValue('--color-accent-1').trim()
+        };
 
         particlesJS('particles-js', {
             particles: {

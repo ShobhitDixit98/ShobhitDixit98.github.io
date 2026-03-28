@@ -7,7 +7,6 @@
       "period": "Sep 2025 - Mar 2026",
       "location": "",
       "image": "",
-      "color": "#667eea",
       "description": "Driving large-scale AI/ML research focused on modeling online community behavior, toxicity dynamics, and lifecycle patterns using advanced Natural Language Processing and statistical learning. Designed end-to-end data pipelines to process and analyze 200GB+ of Reddit data, transforming unstructured social media content into structured insights. Leveraged transformer-based models and large-scale analytics to identify signals of community growth, engagement, moderation effectiveness, and decline. This work directly contributes to understanding digital ecosystems and building predictive frameworks for community sustainability.",
       "responsibilities": [
         "Architected scalable data pipelines to process 200GB+ unstructured Reddit data using Python, enabling efficient ingestion, preprocessing, and transformation of large-scale text datasets",
@@ -28,7 +27,6 @@
       "period": "Oct 2021 - Dec 2024",
       "location": "",
       "image": "",
-      "color": "#f093fb",
       "description": "Built data-driven systems and intelligent automation solutions for large-scale telecom analytics platforms, combining data engineering, machine learning concepts, and distributed system operations. Specialized in analyzing high-volume telecom data to detect anomalies, optimize network performance, and improve customer intelligence systems. Delivered measurable business impact by reducing network congestion by 23% and maintaining 98.8% production uptime across mission-critical systems. Integrated ML-driven approaches into CRM workflows to enhance targeting and engagement across 100K+ users.",
       "responsibilities": [
         "Designed and implemented anomaly detection solutions using Python, SQL, and statistical techniques to identify irregular telecom traffic patterns, reducing network congestion by 23%",
