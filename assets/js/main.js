@@ -227,7 +227,7 @@ async function loadExperience() {
                     ${exp.image ? `
                         <div class="experience-image">
                             <img src="${exp.image}" alt="${exp.company}" loading="lazy">
-                            <div class="experience-image-overlay" style="background: linear-gradient(180deg, transparent 20%, ${exp.color || '#667eea'}44 100%)"></div>
+                            <div class="experience-image-overlay" style="background: linear-gradient(180deg, transparent 20%, ${exp.color ? `${exp.color}44` : 'color-mix(in srgb, var(--color-accent-1) 28%, transparent)'} 100%)"></div>
                         </div>
                     ` : ''}
                     <div class="experience-body">
@@ -708,6 +708,22 @@ function initializeBackToTop() {
 // ============================================
 function initializeParticles() {
     if (typeof particlesJS !== 'undefined') {
+        const particlesContainer = document.getElementById('particles-js');
+        if (particlesContainer) {
+            particlesContainer.innerHTML = '';
+        }
+
+        const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const particlePalette = theme === 'light'
+            ? {
+                colors: ['#6a8f76', '#7ea692', '#2f5b45'],
+                line: '#6a8f76'
+            }
+            : {
+                colors: ['#3c82ff', '#6f7dff', '#3bc9f4'],
+                line: '#3c82ff'
+            };
+
         particlesJS('particles-js', {
             particles: {
                 number: {
@@ -718,7 +734,7 @@ function initializeParticles() {
                     }
                 },
                 color: {
-                    value: ['#667eea', '#764ba2', '#f093fb']
+                    value: particlePalette.colors
                 },
                 shape: {
                     type: 'circle'
@@ -746,7 +762,7 @@ function initializeParticles() {
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: '#667eea',
+                    color: particlePalette.line,
                     opacity: 0.2,
                     width: 1
                 },
@@ -795,8 +811,9 @@ function initializeParticles() {
 // Theme Toggle (Day/Night Mode)
 // ============================================
 function initializeTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+    const savedTheme = localStorage.getItem('theme');
+    const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+    document.documentElement.setAttribute('data-theme', initialTheme);
 
     const toggleBtn = document.getElementById('theme-toggle');
 
@@ -805,16 +822,21 @@ function initializeTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
+            document.documentElement.classList.add('theme-transitioning');
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
 
             updateThemeIcon(newTheme);
+            initializeParticles();
+            setTimeout(() => {
+                document.documentElement.classList.remove('theme-transitioning');
+            }, 350);
         });
 
         toggleBtn.dataset.bound = 'true';
     }
 
-    updateThemeIcon(savedTheme);
+    updateThemeIcon(initialTheme);
 }
 
 function updateThemeIcon(theme) {
