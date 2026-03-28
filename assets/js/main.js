@@ -2,15 +2,24 @@
 // Portfolio Application - Main JavaScript
 // ============================================
 
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
     initializeApp();
-});
+}
 
 // ============================================
 // Initialize Application
 // ============================================
 async function initializeApp() {
     try {
+        // Initialize core interactive features first so controls are always responsive
+        initializeTheme();
+        initializeNavigation();
+        initializeScrollEffects();
+        initializeScrollReveal();
+        initializeBackToTop();
+
         // Initialize particles background
         initializeParticles();
 
@@ -28,12 +37,8 @@ async function initializeApp() {
             loadFooter()
         ]);
 
-        // Initialize interactive features
-        initializeTheme();
+        // Re-run navigation setup after dynamic menu links are rendered
         initializeNavigation();
-        initializeScrollEffects();
-        initializeScrollReveal();
-        initializeBackToTop();
 
         console.log('Portfolio loaded successfully!');
     } catch (error) {
@@ -583,25 +588,21 @@ function initializeNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     // Mobile menu toggle
-    if (navToggle) {
+    if (navToggle && navMenu && !navToggle.dataset.bound) {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
+        navToggle.dataset.bound = 'true';
     }
 
-    // Close menu when clicking on a link
+    // Link interactions (bind once per rendered link)
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
+        if (link.dataset.bound) return;
 
-    // Smooth scroll to sections
-    navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            const targetSection = targetId ? document.querySelector(targetId) : null;
 
             if (targetSection) {
                 const offsetTop = targetSection.offsetTop - 80;
@@ -610,7 +611,13 @@ function initializeNavigation() {
                     behavior: 'smooth'
                 });
             }
+
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
         });
+
+        link.dataset.bound = 'true';
     });
 }
 
@@ -793,7 +800,7 @@ function initializeTheme() {
 
     const toggleBtn = document.getElementById('theme-toggle');
 
-    if (toggleBtn) {
+    if (toggleBtn && !toggleBtn.dataset.bound) {
         toggleBtn.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -804,8 +811,10 @@ function initializeTheme() {
             updateThemeIcon(newTheme);
         });
 
-        updateThemeIcon(savedTheme);
+        toggleBtn.dataset.bound = 'true';
     }
+
+    updateThemeIcon(savedTheme);
 }
 
 function updateThemeIcon(theme) {
