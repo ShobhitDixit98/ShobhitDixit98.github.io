@@ -29,6 +29,7 @@ async function initializeApp() {
         ]);
 
         // Initialize interactive features
+        initializeTheme();
         initializeNavigation();
         initializeScrollEffects();
         initializeScrollReveal();
@@ -84,17 +85,6 @@ async function loadNavigation() {
                     </a>
                 </li>
             `).join('');
-            // Theme Toggle Button
-            if (data.themeToggle && data.themeToggle.enabled) {
-                const toggleHTML = `
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-                            <i class="${data.themeToggle.iconLight}"></i>
-                        </button>
-                    </li>
-                `;
-                navMenu.innerHTML += toggleHTML;
-            }
         }
     } catch (error) {
         console.error('Error loading navigation:', error);
@@ -820,9 +810,17 @@ function initializeTheme() {
 
 function updateThemeIcon(theme) {
     const icon = document.querySelector('#theme-toggle i');
+    const toggleBtn = document.getElementById('theme-toggle');
     if (!icon) return;
 
     icon.className = theme === 'dark'
         ? 'fas fa-sun'
         : 'fas fa-moon';
+
+    if (toggleBtn) {
+        toggleBtn.setAttribute(
+            'aria-label',
+            theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+        );
+    }
 }
