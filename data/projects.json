@@ -16,7 +16,6 @@
         "HTML"
       ],
       "icon": "fas fa-chart-line",
-      "color": "#FFE66D",
       "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&q=80&fit=crop",
       "featured": true,
       "github": "https://github.com/dshobhit709-art/sentiment-analysis-webapp-sagemaker",
@@ -44,7 +43,6 @@
         "Conda"
       ],
       "icon": "fas fa-eye",
-      "color": "#FF6B6B",
       "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600&h=400&q=80&fit=crop",
       "featured": true,
       "github": "https://github.com/dshobhit709-art/yolov10",
@@ -75,7 +73,6 @@
         "ReactJS"
       ],
       "icon": "fas fa-cogs",
-      "color": "#4ECDC4",
       "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&h=400&q=80&fit=crop",
       "featured": false,
       "github": "https://github.com/dshobhit709-art/e2e-devops-k8s-microservices-pipleline",
@@ -102,7 +99,6 @@
         "spaCy"
       ],
       "icon": "fas fa-language",
-      "color": "#FF8B94",
       "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&q=80&fit=crop",
       "featured": false,
       "github": "https://github.com/dshobhit709-art/text-analysis-using-nlp-streamlit",
@@ -119,8 +115,8 @@
     },
     {
       "title": "Data Science IPython Notebooks",
-      "description": "A collection of IPython notebooks covering deep learning (TensorFlow, Keras, Caffe), scikit-learn, statistical inference with SciPy, pandas, matplotlib, NumPy, Spark, MapReduce, and AWS — a comprehensive data science reference.",
-      "longDescription": "A collection of IPython notebooks covering deep learning (TensorFlow, Keras, Caffe), scikit-learn, statistical inference with SciPy, pandas, matplotlib, NumPy, Spark, MapReduce, and AWS — a comprehensive data science reference.",
+      "description": "A collection of IPython notebooks covering deep learning (TensorFlow, Keras, Caffe), scikit-learn, statistical inference with SciPy, pandas, matplotlib, NumPy, Spark, MapReduce, and AWS \u2014 a comprehensive data science reference.",
+      "longDescription": "A collection of IPython notebooks covering deep learning (TensorFlow, Keras, Caffe), scikit-learn, statistical inference with SciPy, pandas, matplotlib, NumPy, Spark, MapReduce, and AWS \u2014 a comprehensive data science reference.",
       "category": "Data Science",
       "technologies": [
         "Python",
@@ -131,7 +127,6 @@
         "Spark"
       ],
       "icon": "fas fa-book",
-      "color": "#B19CD9",
       "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&q=80&fit=crop",
       "featured": false,
       "github": "https://github.com/dshobhit709-art/data-science-ipython-notebooks",

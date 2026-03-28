@@ -9,24 +9,21 @@
       "label": "Email",
       "value": "iamshobhit98@gmail.com",
       "href": "mailto:iamshobhit98@gmail.com",
-      "icon": "fas fa-envelope",
-      "color": "#FF6B6B"
+      "icon": "fas fa-envelope"
     },
     {
       "type": "phone",
       "label": "Phone",
       "value": "+1 (215) 452-9020",
       "href": "tel:12154529020",
-      "icon": "fas fa-phone",
-      "color": "#4ECDC4"
+      "icon": "fas fa-phone"
     },
     {
       "type": "location",
       "label": "Location",
       "value": "PA, USA",
       "href": "https://maps.google.com/?q=PA%2C%20USA",
-      "icon": "fas fa-map-marker-alt",
-      "color": "#FFE66D"
+      "icon": "fas fa-map-marker-alt"
     }
   ],
   "form": {

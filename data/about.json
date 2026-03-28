@@ -10,20 +10,17 @@
     {
       "icon": "fas fa-project-diagram",
       "value": "7+",
-      "label": "Projects Completed",
-      "color": "#FF6B6B"
+      "label": "Projects Completed"
     },
     {
       "icon": "fas fa-briefcase",
       "value": "4+",
-      "label": "Years Experience",
-      "color": "#4ECDC4"
+      "label": "Years Experience"
     },
     {
       "icon": "fas fa-code",
       "value": "65+",
-      "label": "Technologies",
-      "color": "#FFE66D"
+      "label": "Technologies"
     }
   ],
   "downloadCV": {

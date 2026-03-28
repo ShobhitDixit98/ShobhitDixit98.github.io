@@ -10,18 +10,15 @@
   "highlights": [
     {
       "icon": "fas fa-briefcase",
-      "text": "4+ Years Experience",
-      "color": "#FF6B6B"
+      "text": "4+ Years Experience"
     },
     {
       "icon": "fas fa-project-diagram",
-      "text": "5+ Projects Completed",
-      "color": "#4ECDC4"
+      "text": "5+ Projects Completed"
     },
     {
       "icon": "fas fa-code",
-      "text": "Technical Expertise",
-      "color": "#FFE66D"
+      "text": "Technical Expertise"
     }
   ],
   "cta": {
