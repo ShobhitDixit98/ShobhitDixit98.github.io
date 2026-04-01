@@ -1,160 +1,134 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shobhit Dixit - AI/ML Engineer | Portfolio">
-    <meta name="keywords" content="AI/ML Engineer, Portfolio, Shobhit Dixit">
-    <meta name="author" content="Shobhit Dixit">
-    <title>Shobhit Dixit | AI/ML Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Shobhit Dixit — AI/ML Engineer & Data Scientist. 4+ years building scalable ML, deep learning, and generative AI systems.">
+  <meta name="keywords" content="AI Engineer, ML Engineer, Data Scientist, Machine Learning, Portfolio, Shobhit Dixit">
+  <meta name="author" content="Shobhit Dixit">
+  <title>Shobhit Dixit | AI/ML Engineer</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Space Mono = closest open-source match to the pixel/monospace feel of lu-works -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#home" class="nav-brand" id="nav-brand"></a>
-                <div class="nav-actions">
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-                <ul class="nav-menu" id="nav-menu"></ul>
-            </div>
+<body class="page-fade">
+
+  <!-- Custom square cursor (lu-works style) -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand" id="nav-brand">SD<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+      <li><a href="works.html" id="nav-works">Works</a></li>
+      <li><a href="about.html" id="nav-about">About</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html" class="active">Home</a>
+    <a href="works.html">Works</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ── Hero ────────────────────────────────────────────── -->
+  <section class="hero" id="home">
+
+    <!-- Three.js 3D neural-network canvas -->
+    <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- CRT scanline overlay -->
+    <div class="hero-scanlines" aria-hidden="true"></div>
+
+    <!-- Radial vignette -->
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <!-- Corner bracket grids -->
+    <div class="hero-corner-grid hero-corner-grid--tl" aria-hidden="true"></div>
+    <div class="hero-corner-grid hero-corner-grid--br" aria-hidden="true"></div>
+
+    <!-- Availability status pill -->
+    <div class="hero-status-pill" aria-label="Availability status">
+      <div class="hero-status-dot"></div>
+      <span class="hero-status-text">Available for Work &middot; 2026</span>
+    </div>
+
+    <!-- Hero text —  monospace stacked vertically (lu-works style) -->
+    <div class="hero-content">
+      <div class="hero-monogram" id="hero-name">Shobhit Dixit<span class="hero-dot">.</span></div>
+      <div class="hero-red" id="hero-arrows">&gt;&gt;&gt;</div>
+
+      <div class="hero-roles" id="hero-roles" aria-label="Roles">
+        <span class="hero-role" style="--i:0">AI Engineer</span>
+        <span class="hero-role" style="--i:1">Data Scientist</span>
+        <span class="hero-role" style="--i:2">ML Researcher</span>
+        <span class="hero-role" style="--i:3">Builder</span>
+        <span class="hero-role" style="--i:4">Innovator</span>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-hint" id="scroll-hint" aria-label="Scroll to explore">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
         </div>
-    </nav>
+        <span class="scroll-label">Scroll</span>
+        <i class="fas fa-chevron-down scroll-arrow"></i>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-headshot" id="hero-headshot"></div>
-                <p class="hero-greeting" id="hero-greeting"></p>
-                <h1 class="hero-name" id="hero-name"></h1>
-                <h2 class="hero-title" id="hero-title"></h2>
-                <p class="hero-tagline" id="hero-tagline"></p>
-                <p class="hero-summary" id="hero-summary"></p>
+  <!-- ── Stats Strip ──────────────────────────────────────── -->
+  <section class="stats-strip" id="stats">
+    <div class="stat-item">
+      <div class="stat-value">4+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">7+</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">32%</div>
+      <div class="stat-label">Accuracy Improved</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">45%</div>
+      <div class="stat-label">Latency Reduced</div>
+    </div>
+  </section>
 
-                <div class="hero-highlights" id="hero-highlights"></div>
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-left">&copy; 2026 Shobhit Dixit. All rights reserved.</div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/shobhitdixit98/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/ShobhitDixit98" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:iamshobhit98@gmail.com">Email</a>
+      <a href="assets/docs/Shobhit_Dixit_Resume.pdf" target="_blank">Resume</a>
+    </div>
+  </footer>
 
-                <div class="hero-cta" id="hero-cta"></div>
-
-                <div class="hero-social" id="hero-social"></div>
-
-                <div class="scroll-indicator" id="scroll-indicator">
-                    <span>Scroll to explore</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-        </div>
-        <div class="hero-decoration">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section section">
-        <div class="container">
-            <h2 class="section-title" id="about-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text" id="about-text"></div>
-                <div class="about-stats" id="about-stats"></div>
-            </div>
-            <div class="about-actions" id="about-actions"></div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section section">
-        <div class="container">
-            <h2 class="section-title" id="experience-title">Work Experience</h2>
-            <div class="experience-grid" id="experience-grid"></div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section section">
-        <div class="container">
-            <h2 class="section-title" id="skills-title">Skills & Technologies</h2>
-            <div class="skills-grid" id="skills-grid"></div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section section">
-        <div class="container">
-            <h2 class="section-title" id="projects-title">Featured Projects</h2>
-            <div class="projects-grid" id="projects-grid"></div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education-section section">
-        <div class="container">
-            <h2 class="section-title" id="education-title">Education</h2>
-            <div class="education-grid" id="education-grid"></div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section section">
-        <div class="container">
-            <h2 class="section-title" id="contact-title">Get In Touch</h2>
-            <div class="section-image-wrapper" id="contact-image"></div>
-            <p class="section-subtitle" id="contact-subtitle"></p>
-
-            <div class="contact-wrapper">
-                <div class="contact-info" id="contact-info"></div>
-                <div class="contact-form-wrapper">
-                    <form id="contact-form" class="contact-form"></form>
-                </div>
-            </div>
-
-            <div class="contact-social" id="contact-social"></div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-tagline" id="footer-tagline"></p>
-                <div class="footer-social" id="footer-social"></div>
-                <p class="footer-copyright" id="footer-copyright"></p>
-                <div class="footer-links" id="footer-links"></div>
-            </div>
-            <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-                <i class="fas fa-chevron-up"></i>
-            </button>
-        </div>
-    </footer>
-
-    <!-- Particles.js Library -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <!-- Three.js must load before hero-bg.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script>
+  <script src="assets/js/hero-bg.js"></script>
+  <script src="assets/js/cursor.js"></script>
 </body>
+
 </html>

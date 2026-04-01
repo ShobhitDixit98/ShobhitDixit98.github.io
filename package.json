@@ -1,33 +1,17 @@
 {
-  "name": "vibrant-portfolio-template",
+  "name": "shobhitdixit98.github.io",
   "version": "1.0.0",
-  "description": "A modern, vibrant portfolio website template with dark theme and dynamic gradients",
+  "description": "Portfolio website for Shobhit Dixit — AI/ML Engineer and Data Scientist",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 8000",
     "dev": "python -m http.server 8000"
   },
-  "keywords": [
-    "portfolio",
-    "template",
-    "website",
-    "personal",
-    "developer",
-    "designer",
-    "creative",
-    "dark-theme",
-    "json-driven",
-    "responsive",
-    "vanilla-js"
-  ],
-  "author": "Your Name",
+  "author": "Shobhit Dixit <iamshobhit98@gmail.com>",
   "license": "MIT",
+  "homepage": "https://ShobhitDixit98.github.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/vibrant-portfolio-template"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/vibrant-portfolio-template/issues"
-  },
-  "homepage": "https://yourusername.github.io/vibrant-portfolio-template"
+    "url": "https://github.com/ShobhitDixit98/ShobhitDixit98.github.io"
+  }
 }
