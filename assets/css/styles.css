@@ -311,7 +311,7 @@ ul {
 .page-subtitle {
   font-family: var(--font-mono);
   font-size: clamp(13px, 1.6vw, 16px);
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--white);
   max-width: 680px;
   line-height: 1.7;
 }
@@ -568,7 +568,7 @@ ul {
 
 .hero-monogram {
   font-family: var(--font-pixel);
-  font-size: clamp(26px, 3.5vw, 38px);
+  font-size: clamp(28px, 5vw, 64px);
   font-weight: 500;
   color: var(--white);
   margin-bottom: 8px;
@@ -1294,6 +1294,17 @@ ul {
   .contact-item {
     padding: 16px 18px;
   }
+}
+
+/* ── Typewriter Cursor ────────────────────────────────────── */
+.type-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: currentColor;
+  vertical-align: middle;
+  margin-left: 3px;
+  opacity: 0.8;
 }
 
 /* ── Cursor blink on monogram ─────────────────────────────── */
