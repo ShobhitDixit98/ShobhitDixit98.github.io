@@ -290,24 +290,6 @@ ul {
   width: 100%;
 }
 
-.red-acc {
-  font-family: var(--font-mono);
-  font-size: 20px;
-  color: var(--red);
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-.page-title {
-  font-family: var(--font-mono);
-  font-size: clamp(52px, 8vw, 96px);
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: -2px;
-  line-height: 1;
-  margin-bottom: 24px;
-}
-
 .page-subtitle {
   font-family: var(--font-mono);
   font-size: clamp(13px, 1.6vw, 16px);
@@ -1256,10 +1238,6 @@ ul {
 
 /* Mobile */
 @media (max-width: 600px) {
-  .page-title {
-    letter-spacing: -1px;
-  }
-
   .hero-role {
     font-size: clamp(24px, 10vw, 42px);
   }
