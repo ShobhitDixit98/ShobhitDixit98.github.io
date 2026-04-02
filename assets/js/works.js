@@ -19,7 +19,7 @@
       category: "Computer Vision",
       technologies: ["Python", "PyTorch", "YOLO", "OpenCV"],
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&h=600&q=80&fit=crop",
-      github: "https://github.com/dshobhit709-art/yolov10",
+      github: "https://github.com/ShobhitDixit98/YOLOv10-Real-Time-Object-Detection",
       featured: false
     },
     {
@@ -28,7 +28,7 @@
       category: "DevOps / MLOps",
       technologies: ["Terraform", "Docker", "Kubernetes", "GitHub Actions"],
       image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=900&h=600&q=80&fit=crop",
-      github: "https://github.com/dshobhit709-art/e2e-devops-k8s-microservices-pipleline",
+      github: "https://github.com/ShobhitDixit98/E2E-DevOps-Microservices-Pipeline-with-Kubernetes",
       featured: false
     },
     {
@@ -37,7 +37,7 @@
       category: "NLP",
       technologies: ["Python", "Streamlit", "spaCy", "NLP"],
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&h=600&q=80&fit=crop",
-      github: "https://github.com/dshobhit709-art/text-analysis-using-nlp-streamlit",
+      github: "https://github.com/ShobhitDixit98/Text-Analysis-Using-NLP-with-Streamlit",
       featured: false
     },
     {
@@ -46,7 +46,7 @@
       category: "Data Science",
       technologies: ["Python", "TensorFlow", "scikit-learn", "Spark"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&q=80&fit=crop",
-      github: "https://github.com/dshobhit709-art/data-science-ipython-notebooks",
+      github: "https://github.com/ShobhitDixit98/Data-Science-IPython-Notebooks",
       featured: false
     }
   ];
