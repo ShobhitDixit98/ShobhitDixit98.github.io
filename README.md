@@ -7,48 +7,39 @@ Live at: [ShobhitDixit98.github.io](https://ShobhitDixit98.github.io)
 ## Stack
 
 - HTML, CSS, JavaScript (no frameworks, no build step)
-- Google Fonts — Space Mono
-- Font Awesome — icons
+- Three.js — Interactive 3D Neural Network background
+- Google Fonts — Space Mono, Inter
+- Font Awesome — Icons
 
 ## Structure
 
-```
+```text
 ├── index.html          # Home page
 ├── works.html          # Projects
 ├── about.html          # Background, experience, education, skills
 ├── contact.html        # Contact info
 ├── assets/
 │   ├── css/styles.css  # All styles
-│   ├── js/
+│   ├── js/             # UI behavior & content rendering
+│   │   ├── about.js    # Renders experience, education, skills
+│   │   ├── cursor.js   # Custom 'blend mode' cursor logic
+│   │   ├── hero-bg.js  # Three.js 3D background animation
 │   │   ├── nav.js      # Mobile menu toggle
-│   │   ├── works.js    # Renders project cards
-│   │   └── about.js    # Renders experience, education, skills
-│   ├── images/
-│   │   ├── hero-bg.png # Hero section background
-│   │   └── headshot.png
+│   │   └── works.js    # Renders project cards
+│   ├── images/         # Icons, headshots, and fallbacks
 │   └── docs/
 │       └── Shobhit_Dixit_Resume.pdf
-└── data/               # Content JSON files (see below)
 ```
 
-## Content Files (`data/`)
+## Content Management
 
-| File | What it controls |
-|------|-----------------|
-| `profile.json` | Name, title, bio, contact details |
-| `hero.json` | Home page heading and CTA |
-| `about.json` | About section paragraphs |
-| `experience.json` | Work history |
-| `education.json` | Degrees |
-| `skills.json` | Skill categories and tags |
-| `projects.json` | Project cards on the Works page |
-| `contact.json` | Contact links |
-
-> Note: `navigation.json`, `footer.json`, and `site-config.json` are legacy files kept for reference. The current site does not load them dynamically.
+Previously, the site relied on external JSON files in a `data/` directory. To avoid CORS issues and simplify the structure, content is now defined directly inside the corresponding Javascript files.
+- To update your projects, edit the `projects` array inside `assets/js/works.js`.
+- To update your experience, education, or skills, edit the arrays at the top of `assets/js/about.js`.
 
 ## Running Locally
 
-Open any page directly in a browser, or use a local server to avoid CORS issues with the JSON files:
+You can open `index.html` directly in a browser. For the best experience (especially for allowing Three.js to load local texture assets if any are added later), use a local development server:
 
 ```bash
 python -m http.server 8000
@@ -58,4 +49,4 @@ Then visit `http://localhost:8000`.
 
 ## Deploying
 
-Push to the `main` branch of this repo. GitHub Pages serves `index.html` automatically.
+Push your updates to the `main` branch. GitHub Pages will serve `index.html` automatically.
