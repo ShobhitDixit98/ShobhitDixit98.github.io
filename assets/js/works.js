@@ -10,7 +10,7 @@
       category: "Machine Learning",
       technologies: ["Python", "AWS SageMaker", "AWS Lambda", "API Gateway", "HTML"],
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=900&h=600&q=80&fit=crop",
-      github: "https://github.com/dshobhit709-art/sentiment-analysis-webapp-sagemaker",
+      github: "https://github.com/ShobhitDixit98/Sentiment-Analysis-Web-App-with-AWS-SageMaker",
       featured: true
     },
     {
