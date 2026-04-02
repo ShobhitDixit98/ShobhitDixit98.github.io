@@ -18,7 +18,7 @@
 ## ✨ Features
 
 - **Interactive 3D Background**: Features an interactive, deep-space neural network visualization built purely with *Three.js*, running efficiently natively on the GPU.
-- **Premium Glassmorphism UI**: Inspired by cutting-edge design studios (e.g. Lu-Works), utilizing frosted-glass overlays (`backdrop-filter`) and deep contrasting panels for project cards.
+- **Premium Glassmorphism UI**: Inspired by cutting-edge design studios, utilizing frosted-glass overlays (`backdrop-filter`) and deep contrasting panels for project cards.
 - **Custom Hardware-Accelerated Cursor**: Implements an inverted, square custom cursor spanning the entire application using optimized CSS transforms and `mix-blend-mode`.
 - **Zero-Dependency Architecture**: No `npm`, no Webpack, no React. Pure Vanilla JavaScript, HTML5, and CSS3 for lightning-fast page loading and total control.
 - **Automatic Typewriter Subtitles**: Implements a native, HTML-aware DOM typewriter effect ensuring dynamic and fluid loading sequences for text sections.
