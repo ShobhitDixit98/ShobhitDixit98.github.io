@@ -7,7 +7,7 @@
 [![Three.js](https://img.shields.io/badge/3D-Three.js-black?style=for-the-badge&logo=three.js)]()
 [![Build Status](https://img.shields.io/badge/Build-Zero_Dependency-brightgreen?style=for-the-badge)]()
 
-**A highly customized, performance-focused personal portfolio built for an AI/ML Engineer with interactive 3D elements and a premium UI aesthetic.**  
+**A highly customized, performance-focused personal portfolio built for an AI/ML Engineer and Data Engineer with interactive 3D elements and a premium UI aesthetic.**  
 
 [Live Demo](https://ShobhitDixit98.github.io) 
 
