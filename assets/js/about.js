@@ -4,12 +4,12 @@
   /* ── Experience ──────────────────────────────────────────── */
   const expData = [
     {
-      title: "Data Science Research Assistant",
-      company: "Drexel University, PA, USA",
+      title: "ML Engineer (NLP Research)",
+      company: "AI/ML Co-op, Computational Social Science Lab, Drexel University, PA, USA",
       period: "Sep 2025 — Mar 2026",
-      desc: "Driving large-scale AI/ML research focused on modeling online community behavior, toxicity dynamics, and lifecycle patterns using advanced NLP and statistical learning. Designed end-to-end data pipelines to process and analyze 200GB+ of Reddit data.",
+      desc: "Driving large-scale ML research focused on modeling online community behavior, toxicity dynamics, and lifecycle patterns using advanced NLP and statistical learning. Designed end-to-end data pipelines to process and analyze 200GB+ of Reddit data.",
       bullets: [
-        "Architected scalable data pipelines to process 200GB+ unstructured Reddit data using Python",
+        "Architected scalable data pipelines to process 500k+ unstructured Reddit dataset using Python",
         "Applied transformer-based NLP models (Hugging Face, DeBERTa) and Detoxify for toxicity classification across millions of records",
         "Engineered features including sentiment distributions, toxicity scores, and temporal engagement metrics",
         "Performed statistical modeling and EDA to uncover trends in community growth and moderation impact",
@@ -18,12 +18,12 @@
       ]
     },
     {
-      title: "Software Engineer (AI, Data & Systems)",
+      title: "Software Engineer (ML, Data & Backend Systems)",
       company: "Mobileum Technologies, India",
       period: "Oct 2021 — Dec 2024",
       desc: "Built data-driven systems and intelligent automation for large-scale telecom analytics platforms, combining data engineering, ML concepts, and distributed system operations. Delivered 23% reduction in network congestion and maintained 98.8% production uptime.",
       bullets: [
-        "Designed anomaly detection solutions using Python, SQL, and statistical techniques — reduced network congestion by 23%",
+        "Designed anomaly detection solutions using Python, SQL, and statistical techniques, reduced network congestion by 23%",
         "Processed and analyzed large-scale telecom datasets (millions of events/day) for user behavior and network performance insights",
         "Developed robust data pipelines and ETL automation scripts using Python and Bash",
         "Integrated ML-based targeting logic into CRM platforms, improving campaign effectiveness for 100K+ users in EMEA",
@@ -87,7 +87,7 @@
   const skillsData = [
     {
       label: "Programming Languages",
-      tags: ["Python", "SQL", "R", "Java", "Bash", "Scala"]
+      tags: ["Python", "SQL", "R", "Java", "Bash", "C/C++"]
     },
     {
       label: "ML / DL Frameworks",
